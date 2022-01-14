@@ -1,0 +1,13 @@
+var params = {
+    TableName: "to_do"
+}
+
+dynamodb.scan(params, onScan)
+
+function onScan(err, data) {
+    if (err){
+        console.error("Error")
+    }else{
+        console.log(data)
+    }
+}
